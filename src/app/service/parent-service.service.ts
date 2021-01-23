@@ -38,4 +38,40 @@ export class ParentServiceService {
 
     return of(questions.sort((a, b) => a.order - b.order));
   }
+
+  getForm2Elements() {
+    const elements: ElementBase<string>[] = [
+      new Textbox({
+        key: "username",
+        label: "Username",
+        value: "",
+        required: true,
+        order: 1,
+      }),
+      new Dropdown({
+        key: "brave",
+        label: "Bravery Rating",
+        options: [
+          { key: "solid", value: "Solid" },
+          { key: "great", value: "Great" },
+          { key: "good", value: "Good" },
+          { key: "unproven", value: "Unproven" },
+        ],
+        order: 3,
+      }),
+      new Dropdown({
+        key: "countries",
+        label: "Choose Country",
+        options: [
+          { key: "libya", value: "Libya" },
+          { key: "iraq", value: "Iraq" },
+          { key: "malaysia", value: "Malaysia" },
+          { key: "singapore", value: "Singapore" },
+        ],
+        order: 3,
+      }),
+    ];
+
+    return of(elements.sort((a, b) => a.order - b.order));
+  }
 }

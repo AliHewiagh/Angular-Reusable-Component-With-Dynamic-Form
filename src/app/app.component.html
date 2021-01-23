@@ -6,13 +6,15 @@
       ></app-child1-component>
     </mat-grid-tile>
     <mat-grid-tile colspan="1" rowspan="2" style="background: lightgreen">
-      <app-child2-component></app-child2-component>
+      Coming soon
     </mat-grid-tile>
     <mat-grid-tile colspan="1" rowspan="1" style="background: lightpink">
-      888
+      Coming soon
     </mat-grid-tile>
     <mat-grid-tile colspan="2" rowspan="1" style="background: #ddbdf1">
-      888
+      <app-child2-component
+        [elements]="form2Elements$ | async"
+      ></app-child2-component>
     </mat-grid-tile>
   </mat-grid-list>
 </div>

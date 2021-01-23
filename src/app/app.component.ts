@@ -10,8 +10,10 @@ import { Observable } from "rxjs";
 })
 export class AppComponent {
   form1Elements$: Observable<ElementBase<any>[]>;
+  form2Elements$: Observable<ElementBase<any>[]>;
 
   constructor(service: ParentServiceService) {
     this.form1Elements$ = service.getForm1Elements();
+    this.form2Elements$ = service.getForm2Elements();
   }
 }
