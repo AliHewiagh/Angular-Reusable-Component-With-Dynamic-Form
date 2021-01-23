@@ -2,11 +2,11 @@
   <mat-grid-list cols="4" rowHeight="300px">
     <mat-grid-tile colspan="3" rowspan="1" style="background: lightblue">
       <app-child1-component
-        [elements]="elements$ | async"
+        [elements]="form1Elements$ | async"
       ></app-child1-component>
     </mat-grid-tile>
     <mat-grid-tile colspan="1" rowspan="2" style="background: lightgreen">
-      888
+      <app-child2-component></app-child2-component>
     </mat-grid-tile>
     <mat-grid-tile colspan="1" rowspan="1" style="background: lightpink">
       888

@@ -7,9 +7,15 @@ import { LayoutModule } from "@angular/cdk/layout";
 import { ReactiveFormsModule } from "@angular/forms";
 import { Child1ComponentComponent } from "./factory/child1-component/child1-component.component";
 import { ElementComponent } from "./factory/shared/element/element.component";
+import { Child2ComponentComponent } from "./factory/child2-component/child2-component.component";
 
 @NgModule({
-  declarations: [AppComponent, Child1ComponentComponent, ElementComponent],
+  declarations: [
+    AppComponent,
+    Child1ComponentComponent,
+    ElementComponent,
+    Child2ComponentComponent,
+  ],
   imports: [
     BrowserModule,
     MaterialModule,
