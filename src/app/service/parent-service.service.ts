@@ -56,7 +56,7 @@ export class ParentServiceService {
           { key: "good", value: "Good" },
           { key: "unproven", value: "Unproven" },
         ],
-        order: 3,
+        order: 2,
       }),
       new Dropdown({
         key: "countries",
