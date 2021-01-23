@@ -1,10 +1,7 @@
 <div>
   <form (ngSubmit)="onSubmit()" [formGroup]="form">
     <div *ngFor="let element of elements" class="form-row">
-      <!-- <app-filter-details
-        [question]="question"
-        [form]="form"
-      ></app-filter-details> -->
+      <app-element [element]="element" [form]="form"></app-element>
     </div>
 
     <div class="form-row">

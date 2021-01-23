@@ -1,7 +1,9 @@
 <div class="content" role="main">
   <mat-grid-list cols="4" rowHeight="300px">
     <mat-grid-tile colspan="3" rowspan="1" style="background: lightblue">
-      <!-- <app-filter [questions]="questions$ | async"></app-filter> -->
+      <app-child1-component
+        [elements]="elements$ | async"
+      ></app-child1-component>
     </mat-grid-tile>
     <mat-grid-tile colspan="1" rowspan="2" style="background: lightgreen">
       888
