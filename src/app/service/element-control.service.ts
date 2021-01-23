@@ -6,13 +6,13 @@ import { FormControl, FormGroup, Validators } from "@angular/forms";
 export class ElementControlService {
   constructor() {}
 
-  toFormGroup(questions: ElementBase<string>[]) {
+  toFormGroup(elements: ElementBase<string>[]) {
     const group: any = {};
 
-    questions.forEach((question) => {
-      group[question.key] = question.required
-        ? new FormControl(question.value || "", Validators.required)
-        : new FormControl(question.value || "");
+    elements.forEach((element) => {
+      group[element.key] = element.required
+        ? new FormControl(element.value || "", Validators.required)
+        : new FormControl(element.value || "");
     });
     return new FormGroup(group);
   }

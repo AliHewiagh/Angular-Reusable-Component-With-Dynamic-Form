@@ -1,1 +1,18 @@
-<p>child1-component works!</p>
+<div>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+    <div *ngFor="let element of elements" class="form-row">
+      <!-- <app-filter-details
+        [question]="question"
+        [form]="form"
+      ></app-filter-details> -->
+    </div>
+
+    <div class="form-row">
+      <button type="submit" [disabled]="!form.valid">Save</button>
+    </div>
+  </form>
+
+  <div *ngIf="payLoad" class="form-row">
+    <strong>Saved the following values</strong><br />{{ payLoad }}
+  </div>
+</div>
