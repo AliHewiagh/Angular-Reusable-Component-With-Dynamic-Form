@@ -7,9 +7,8 @@ import { Textbox } from "../factory/element/textbox";
 
 @Injectable()
 export class ParentServiceService {
-  // TODO: get from a remote source of question metadata
   getForm1Elements() {
-    const questions: ElementBase<string>[] = [
+    const elements: ElementBase<string>[] = [
       new Dropdown({
         key: "brave",
         label: "Bravery Rating",
@@ -36,7 +35,7 @@ export class ParentServiceService {
       }),
     ];
 
-    return of(questions.sort((a, b) => a.order - b.order));
+    return of(elements.sort((a, b) => a.order - b.order));
   }
 
   getForm2Elements() {
