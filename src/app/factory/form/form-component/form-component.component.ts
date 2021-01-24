@@ -1,15 +1,16 @@
-import { ElementControlService } from "./../../service/element-control.service";
-import { ElementBase } from "./../../model/element-base";
+import { ElementControlService } from "../../../service/element-control.service";
+import { ElementBase } from "../../../model/element-base";
 import { Component, Input, OnInit } from "@angular/core";
 import { FormGroup } from "@angular/forms";
 @Component({
-  selector: "app-child1-component",
-  templateUrl: "./child1-component.component.html",
-  styleUrls: ["./child1-component.component.css"],
+  selector: "app-form-component",
+  templateUrl: "./form-component.component.html",
+  styleUrls: ["./form-component.component.css"],
   providers: [ElementControlService],
 })
-export class Child1ComponentComponent implements OnInit {
+export class FormComponentComponent implements OnInit {
   @Input() elements: ElementBase<string>[] = [];
+  @Input() inline: boolean;
   form: FormGroup;
   payLoad = "";
 

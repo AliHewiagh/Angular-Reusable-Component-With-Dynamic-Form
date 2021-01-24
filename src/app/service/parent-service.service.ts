@@ -1,9 +1,10 @@
-import { Dropdown } from "./../factory/element/dropdown";
+import { Textarea } from "../factory/form/element/textarea";
+import { Dropdown } from "../factory/form/element/dropdown";
 import { ElementBase } from "./../model/element-base";
 
 import { Injectable } from "@angular/core";
 import { of } from "rxjs";
-import { Textbox } from "../factory/element/textbox";
+import { Textbox } from "../factory/form/element/textbox";
 
 @Injectable()
 export class ParentServiceService {
@@ -32,6 +33,12 @@ export class ParentServiceService {
         label: "Email",
         type: "email",
         order: 2,
+      }),
+      new Textarea({
+        key: "comment",
+        label: "Comment",
+        type: "comment",
+        order: 4,
       }),
     ];
 
@@ -67,7 +74,14 @@ export class ParentServiceService {
           { key: "malaysia", value: "Malaysia" },
           { key: "singapore", value: "Singapore" },
         ],
+        order: 4,
+      }),
+      new Textarea({
+        key: "comment",
+        label: "Comment",
+        type: "comment",
         order: 3,
+        required: true,
       }),
     ];
 

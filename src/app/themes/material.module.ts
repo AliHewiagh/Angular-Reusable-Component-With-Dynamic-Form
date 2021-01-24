@@ -25,6 +25,8 @@ import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatExpansionModule } from "@angular/material/expansion";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { MatMenuModule } from "@angular/material/menu";
+import { MatCardModule } from "@angular/material/card";
+import { MatTabsModule } from "@angular/material/tabs";
 
 import { MatStepperModule } from "@angular/material/stepper";
 @NgModule({
@@ -35,6 +37,8 @@ import { MatStepperModule } from "@angular/material/stepper";
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatTabsModule,
+    MatCardModule,
     MatTableModule,
     MatFormFieldModule,
     MatPaginatorModule,

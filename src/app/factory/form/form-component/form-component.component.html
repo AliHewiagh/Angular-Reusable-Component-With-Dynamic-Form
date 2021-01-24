@@ -1,0 +1,26 @@
+<div>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+    <div
+      [ngClass]="{ yes: inline === true }"
+      *ngFor="let element of elements"
+      class="form-row"
+    >
+      <app-element [element]="element" [form]="form"></app-element>
+    </div>
+
+    <div class="form-row">
+      <button
+        [disabled]="!form.valid"
+        type="submit"
+        mat-raised-button
+        color="primary"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
+
+  <div *ngIf="payLoad" class="form-row">
+    <strong>OBJECT:</strong><br />{{ payLoad }}
+  </div>
+</div>

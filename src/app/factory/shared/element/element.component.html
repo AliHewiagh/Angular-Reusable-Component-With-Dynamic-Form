@@ -1,30 +1,42 @@
 <div [formGroup]="form">
-  <label [attr.for]="element.key"
-    >{{ element.label }}
-    <span style="color: red" *ngIf="element.required">*</span></label
-  >
-
+  <p *ngIf="!isValid" class="error-message">{{ element.label }} is required</p>
   <div [ngSwitch]="element.controlType">
-    <input
-      *ngSwitchCase="'textbox'"
-      [formControlName]="element.key"
-      [id]="element.key"
-      [type]="element.type"
-    />
+    <mat-form-field *ngSwitchCase="'textbox'" class="example-full-width">
+      <mat-label
+        >{{ element.label }}
+        <span class="required" *ngIf="element.required">*</span></mat-label
+      >
+      <input
+        matInput
+        [formControlName]="element.key"
+        [id]="element.key"
+        [type]="element.type"
+      />
+    </mat-form-field>
 
-    <select
-      [id]="element.key"
-      *ngSwitchCase="'dropdown'"
-      [formControlName]="element.key"
-    >
-      <option *ngFor="let opt of element.options" [value]="opt.key">
-        {{ opt.value }}
-      </option>
-    </select>
-  </div>
+    <mat-form-field *ngSwitchCase="'dropdown'" appearance="fill">
+      <mat-label
+        >{{ element.label }}
+        <span class="required" *ngIf="element.required">*</span></mat-label
+      >
+      <mat-select [id]="element.key" [formControlName]="element.key">
+        <mat-option *ngFor="let opt of element.options" [value]="opt.key">
+          {{ opt.value }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
 
-  <div class="errorMessage" *ngIf="!isValid">
-    <p style="font-size: small; color: red">{{ element.label }} is required</p>
+    <mat-form-field *ngSwitchCase="'textarea'" class="example-full-width">
+      <mat-label
+        >{{ element.label }}
+        <span class="required" *ngIf="element.required">*</span></mat-label
+      >
+      <textarea
+        [id]="element.key"
+        [formControlName]="element.key"
+        matInput
+      ></textarea>
+    </mat-form-field>
   </div>
 </div>
 <br />

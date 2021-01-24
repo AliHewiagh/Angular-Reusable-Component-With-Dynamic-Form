@@ -1,20 +1,30 @@
 <div class="content" role="main">
-  <mat-grid-list cols="4" rowHeight="300px">
+  <mat-grid-list cols="4">
     <mat-grid-tile colspan="3" rowspan="1" style="background: lightblue">
-      <app-child1-component
+      <app-form-component
+        style="padding: 10px 10px 10px 10px"
         [elements]="form1Elements$ | async"
-      ></app-child1-component>
+        [inline]="true"
+      ></app-form-component>
     </mat-grid-tile>
-    <mat-grid-tile colspan="1" rowspan="2" style="background: lightgreen">
-      Coming soon
+    <mat-grid-tile colspan="1" rowspan="3" style="background: lightgreen">
+      <!-- <app-form-component
+        style="padding: 10px 10px 10px 10px"
+        [elements]="form1Elements$ | async"
+      ></app-form-component> -->
     </mat-grid-tile>
-    <mat-grid-tile colspan="1" rowspan="1" style="background: lightpink">
-      Coming soon
-    </mat-grid-tile>
-    <mat-grid-tile colspan="2" rowspan="1" style="background: #ddbdf1">
-      <app-child2-component
+    <mat-grid-tile colspan="1" rowspan="2" style="background: lightpink">
+      <!-- <app-form-component
+        style="padding: 10px 10px 10px 10px"
         [elements]="form2Elements$ | async"
-      ></app-child2-component>
+      ></app-form-component> -->
+    </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="2" style="background: #ddbdf1">
+      <!-- <app-form-component
+        style="padding: 10px 10px 10px 10px"
+        [elements]="form2Elements$ | async"
+        [inline]="true"
+      ></app-form-component> -->
     </mat-grid-tile>
   </mat-grid-list>
 </div>

@@ -1,3 +1,4 @@
+import { FormComponentComponent } from "./factory/form/form-component/form-component.component";
 import { MaterialModule } from "./themes/material.module";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
@@ -5,17 +6,10 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { LayoutModule } from "@angular/cdk/layout";
 import { ReactiveFormsModule } from "@angular/forms";
-import { Child1ComponentComponent } from "./factory/child1-component/child1-component.component";
 import { ElementComponent } from "./factory/shared/element/element.component";
-import { Child2ComponentComponent } from "./factory/child2-component/child2-component.component";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    Child1ComponentComponent,
-    ElementComponent,
-    Child2ComponentComponent,
-  ],
+  declarations: [AppComponent, ElementComponent, FormComponentComponent],
   imports: [
     BrowserModule,
     MaterialModule,
