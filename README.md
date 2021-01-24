@@ -9,7 +9,7 @@ The project shows how to reuse an angular component with a dynamic form. The imp
 ## Getting Started 
 
 - Clone the project.
-- Open the project diroctory in your terminal/command line and run `npm install`. Make sure you already install npm as the package manager.
+- Open the project diroctory in your terminal/command line and run `npm install`. Make sure you already installed [npm](https://www.npmjs.com/get-npm) as a package manager.
 - Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
 
